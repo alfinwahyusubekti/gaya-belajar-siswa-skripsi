@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'modules/color';
+@import 'modules/reset';
+
+.area {
+    margin: 40px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        background-color: white;
+        border-radius: 12px;
+        padding: 30px;
+        width: 80%;
+
+        .header {
+            border-bottom: 1px solid $gray-400;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .left {
+                i {
+                    font-size: 100px;
+                }
+            }
+
+            .right {
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 28px;
+
+                    .drop {
+                        cursor: pointer;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 180px;
+                        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                    }
+
+                    .dropdown-content {
+                        a {
+                            color: black;
+                            padding: 12px 16px;
+                            display: block;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .dropdown:hover {
+                    .dropdown-content {
+                        display: block;
+
+                        a:hover {
+                            background-color: #eeeeee;
+                        }
+                    }
+                }
+
+                p {
+                    margin: 20px 0;
+                    font-size: 14px;
+                    color: $gray-700;
+                }
+
+                a.login,
+                a.manajemen,
+                a.home {
+                    button {
+                        color: white;
+                        padding: 10px 12px;
+                    }
+                }
+
+                a.login {
+                    button {
+                        background-color: $danger;
+                    }
+                }
+
+                a.home {
+                    button {
+                        background-color: $success;
+                    }
+                }
+            }
+        }
+
+        .search {
+            margin: 20px 0;
+
+            input {
+                width: 40%;
+                border-radius: 24px;
+                box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .table-area {
+            max-height: 500px;
+            max-width: 100%;
+            overflow: auto;
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                text-align: center;
+
+                tr {
+                    th {
+                        background-color: $primary;
+                        color: white;
+                        padding: 4px 12px;
+                        position: sticky;
+                        top: 0;
+                        font-size: 14px;
+                    }
+
+                    th.thScroll {
+                        top: 30px;
+                    }
+
+                    td {
+                        font-size: 14px;
+                        padding: 4px;
+                    }
+
+                    td.aksi {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        a.update,
+                        a.delete,
+                        a.view {
+                            margin: 4px;
+                            button {
+                                font-size: 14px;
+                                color: white;
+                                border-radius: 50%;
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        a.update {
+                            button {
+                                background-color: $warning;
+                            }
+                        }
+
+                        a.delete {
+                            button {
+                                background-color: $danger;
+                            }
+                        }
+
+                        a.view {
+                            button {
+                                background-color: #929292;
+                            }
+                        }
+                    }
+
+                    th,
+                    td {
+                        border: 1px solid #ddd;
+                    }
+                }
+
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+            .tambah {
+                button {
+                    background-color: $success;
+                    color: white;
+                    padding: 10px 14px;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 500px;
+            overflow: auto;
+
+            form {
+                width: 50%;
+
+                .form-input {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    position: relative;
+
+                    label {
+                        margin-bottom: 4px;
+                        font-weight: 500;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    label.notif {
+                        color: red;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-input.nik {
+                    cursor: not-allowed;
+
+                    input.inputNik {
+                        pointer-events: none;
+                    }
+                }
+
+                .form-input.not {
+                    cursor: not-allowed;
+
+                    .pointer {
+                        pointer-events: none;
+                    }
+                }
+
+                .form-button {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        background-color: $primary;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        color: white;
+                    }
+                }
+            }
+
+            .image {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                img {
+                    width: 380px;
+                }
+            }
+        }
+
+        .content.form {
+            max-height: none;
+        }
+
+        .ques {
+            display: none;
+            width: 100%;
+
+            .btn-back {
+                width: 100%;
+                margin-bottom: 20px;
+
+                form {
+                    button {
+                        background-color: $warning;
+                        padding: 10px 14px;
+                        border-radius: 28px;
+                        font-weight: 700;
+                        color: white;
+                    }
+                }
+            }
+
+            form {
+                width: 100%;
+
+                .title {
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                }
+
+                .content {
+                    flex-direction: column;
+                    width: 100%;
+
+                    .form-ques {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        .radio-area {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .radio-btn {
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+
+                .ques-button {
+                    margin-top: 10px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    button {
+                        background-color: $primary;
+                        padding: 10px 14px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        margin-top: -200px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes slideLeftFade {
+    0% {
+        opacity: 0;
+        margin-right: -30px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .area {
+        .container {
+            width: 90%;
+
+            .header {
+                .left {
+                    width: 50%;
+                }
+            }
+
+            .content {
+                .image {
+                    img {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .area {
+        margin: 40px 30px;
+
+        .container {
+            .content {
+                flex-direction: column-reverse;
+
+                form {
+                    width: 100%;
+                }
+
+                .image {
+                    width: 100%;
+                    justify-content: center;
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+
+            .search {
+                input {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .area {
+        margin: 20px 10px;
+
+        .container {
+            width: 90%;
+            padding: 20px;
+
+            .header {
+                flex-direction: column;
+
+                .left,
+                .right {
+                    width: 100%;
+                }
+
+                .right {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .search {
+                input {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
