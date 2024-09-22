@@ -1,4 +1,4 @@
-![Screenshot 2024-09-22 130128](https://github.com/user-attachments/assets/05e99a75-f027-496b-a382-8bee96fe48ef)# Aplikasi Web untuk Mengidentifikasi Gaya Belajar Siswa menggunakan Metode Forward Chaining 
+# Aplikasi Web untuk Mengidentifikasi Gaya Belajar Siswa menggunakan Metode Forward Chaining 
 
 Dibuat menggunakan bahasa pemrograman PHP dan sedikit sentuhan Javascript
 Untuk menginstall dan melihat demo projek di komputer anda, silahkan ikuti tutorial dibawah
